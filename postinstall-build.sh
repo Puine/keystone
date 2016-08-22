@@ -15,7 +15,9 @@ if [ ! -e $canary ] || \
 	if [ ! -e $devFile ]; then
 		shouldRemoveDev=true
 		# carefully curated collection of build dependencies, update with package.json
+		# Note the duplication of elemental and react-select vs production
 		npm install \
+			elemental react-select \
 			aphrodite \
 			babel-core \
 			babel-loader \
